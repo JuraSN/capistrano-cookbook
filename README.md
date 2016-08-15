@@ -44,7 +44,7 @@ require 'capistrano/cookbook/setup_config'
 
 #### Check Revision
 
-Checks that the remote branch the selected stage deploys from, matches the current local version, if it doesn't the deploy will be halted with an error. 
+Checks that the remote branch the selected stage deploys from, matches the current local version, if it doesn't the deploy will be halted with an error.
 
 Add the following to `deploy.rb`
 
@@ -164,13 +164,13 @@ The `deploy:setup_config` tasks provides a simple way to automate the generation
 
 If no values are provided in `deploy.rb` to override the defaults then this task includes opinionated defaults to setup a server for deployment as explained in the book [Reliably Deploying Rails Applications](https://leanpub.com/deploying_rails_applications) and [this tutorial](http://www.talkingquickly.co.uk/2014/01/deploying-rails-apps-to-a-vps-with-capistrano-v3/).
 
-Each of the `config_files` will be created in `APP_PATH/shared.config`.
+Each of the `config_files` will be created in `APP_PATH/shared/config`.
 
 The task looks in the following locations for a template file with a corresponding name with a `.erb` extension:
 
 * `config/deploy/STAGE/FILENAME.erb`
 * `config/deploy/shared/FILENAME.erb`
-* `templates/FILENAME.erb` directory of this gem ([github link](https://github.com/TalkingQuickly/capistrano-cookbook/tree/master/lib/capistrano/cookbook/templates))  
+* `templates/FILENAME.erb` directory of this gem ([github link](https://github.com/TalkingQuickly/capistrano-cookbook/tree/master/lib/capistrano/cookbook/templates))
 
 For any config files included in the `source` part of an entry in the `symlinks` array, a symlink will be created to the corresponding `link` location on the target machine.
 
